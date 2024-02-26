@@ -16,4 +16,4 @@ For the Data Definition Language (DDL) statements used in setting up the Snowfla
 
 ### Target Table After Loading Data
 
-![Target Table After Loading Data](images/Snowflake Target Data.png)
+![Target Table After Loading Data](images/Snowflake&#32;Target&#32;Data.png)
