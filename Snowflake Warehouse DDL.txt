@@ -1,0 +1,50 @@
+/*
+Author: Saptak Bhadra
+
+This SQL script is intended for creating a data warehouse in Snowflake. The script includes the following steps:
+1. Drop the existing database if it exists.
+2. Create a new database named 'city_database' if it does not exist.
+3. Create a warehouse named 'city_warehouse' if it does not exist.
+4. Create a new schema named 'new_city_schema'.
+5. Create a staging table ('snowflake_ext_stage_yml') pointing to the S3 Bucket with AWS credentials.
+6. List the contents of the created stage.
+7. Define a file format named 'csv_format' for CSV files with specific delimiters and header skipping.
+8. View data from the 'city_info' table after data is loaded using Airflow 
+
+
+Note: Ensure that AWS credentials are kept secure and managed appropriately.
+*/
+
+-- Step 1: Drop the existing database if it exists
+DROP DATABASE IF EXISTS city_database;
+
+-- Step 2: Select data from the 'new_city_schema' schema within the 'city_database'
+SELECT * FROM city_database.new_city_schema;
+
+-- Step 3: Create a new database named 'city_database' if it does not exist
+CREATE DATABASE IF NOT EXISTS city_database;
+
+-- Step 4: Create a warehouse named 'city_warehouse' if it does not exist
+CREATE WAREHOUSE IF NOT EXISTS city_warehouse;
+
+-- Step 5: Create a new schema named 'new_city_schema'
+CREATE SCHEMA new_city_schema;
+
+-- Step 6: Create a staging table ('snowflake_ext_stage_yml') pointing to the S3 Bucket with AWS credentials
+CREATE OR REPLACE STAGE city_database.new_city_schema.snowflake_ext_stage_yml 
+URL='s3://airflow-snow-email-bucket-1/'
+CREDENTIALS=(AWS_KEY_ID='##############'
+             AWS_SECRET_KEY='################################');
+
+-- Step 7: List the contents of the created stage
+LIST @city_database.new_city_schema.snowflake_ext_stage_yml;
+
+-- Step 8: Define a file format named 'csv_format' for CSV files with specific delimiters and header skipping
+CREATE OR REPLACE FILE FORMAT csv_format
+    TYPE = 'CSV'
+    FIELD_DELIMITER = ','
+    RECORD_DELIMITER = '\n'
+    SKIP_HEADER = 1;
+
+-- Step 9: View data from the 'city_info' table
+SELECT * FROM city_info;
