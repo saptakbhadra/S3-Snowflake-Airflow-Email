@@ -29,7 +29,7 @@ Link to Output Picture: [Output Picture](link_to_output_picture)
 
 ## Hosted Machine
 
-EC2 instance
+<img src="images/EC2_logo.png" alt="EC2 Logo" width="100"/>
 
 ## Language Used
 
