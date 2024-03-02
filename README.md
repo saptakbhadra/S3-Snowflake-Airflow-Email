@@ -1,19 +1,36 @@
-# S3-Snowflake-Airflow-Email
+# Cloud-based Data Ingestion from S3 to Snowflake with Apache Airflow
 
-## DDL Statements
+## Overview
 
-For the Data Definition Language (DDL) statements used in setting up the Snowflake Warehouse, please refer to [Snowflake Warehouse DDL.txt](Snowflake%20Warehouse%20DDL.txt).
+This project is hosted entirely in the cloud on an EC2 instance running Apache Airflow. Its primary objective is to efficiently ingest data from S3 to Snowflake while providing notifications upon successful job completion.
 
-## Visual Overview
+## Steps
 
-### Flowchart
+1. **Data Storage in S3:**
+   - Data is stored in S3, ready for ingestion.
 
-![Flowchart](images/Flowchart.png)
+2. **EC2 Instance Setup:**
+   - An EC2 instance is created, and Apache Airflow is installed within a Python environment on the same instance.
 
-### DAGs
+3. **Warehouse Structure Creation:**
+   - Execute the Snowflake Warehouse DDL script ([Snowflake Warehouse DDL.txt](link_to_file)) to establish the required structure. This includes creating a Staging table connected to S3 and the Target table, *city_info*.
 
-![DAGs](images/Airflow.png)
+4. **ETL Job with PySpark:**
+   - **ETL Job Name:** [airflow_snowflake_s3_email.py](link_to_code)
+     - 4.1. Use S3 key sensor to detect any file uploaded to S3 every 3 seconds.
+     - 4.2. Move the data from the staging table to the target table.
+     - 4.3. Send an email notification after successful data ingestion.
 
-### Target Table After Loading Data
+## Output
 
-![Target Table After Loading Data](images/Snowflake&#32;Target&#32;Data.png)
+Link to Output Picture: [Output Picture](link_to_output_picture)
+
+## Hosted Machine
+
+EC2 instance
+
+## Language Used
+
+![PySpark Logo](link_to_pyspark_logo)
+
+Feel free to explore the provided links to delve deeper into specific components of the project!
