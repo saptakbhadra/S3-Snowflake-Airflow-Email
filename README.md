@@ -33,9 +33,9 @@ This project is hosted entirely in the cloud on an EC2 instance running Apache A
 ## Hosted Machine
 
 <img src="images/EC2_logo.png" alt="EC2 Logo" width="100" align="left"/>
+
 #### EC2
 
-<!-- -->
 ## Language Used
 
 
