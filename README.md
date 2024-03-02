@@ -35,7 +35,7 @@ This project is hosted entirely in the cloud on an EC2 instance running Apache A
 <img src="images/EC2_logo.png" alt="EC2 Logo" width="100" align="left"/>
 
 #### EC2
-
+<!-- -->
 ## Language Used
 
 <img src="images/PySpark_logo.jpeg" alt="PySpark Logo" width="100"/>
