@@ -5,7 +5,7 @@
 This project is hosted entirely in the cloud on an EC2 instance running Apache Airflow. Its primary objective is to efficiently ingest data from S3 to Snowflake while providing notifications upon successful job completion.
 
 ## Workflow
-<img src="images/Flowchart.png" alt="Flowchart" width="700"/>
+<img src="images/Flowchart.png" alt="Flowchart" width="800"/>
 
 ## Steps
 1. **Data Storage in S3:**
@@ -33,6 +33,7 @@ This project is hosted entirely in the cloud on an EC2 instance running Apache A
 ## Hosted Machine
 
 <img src="images/EC2_logo.png" alt="EC2 Logo" width="100"/>
+
 #### EC2
 
 ## Language Used
