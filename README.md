@@ -30,7 +30,7 @@ Link to Output Picture: [Output Picture](link_to_output_picture)
 ## Hosted Machine
 
 <img src="images/EC2_logo.png" alt="EC2 Logo" width="100"/>
-
+#### EC2
 ## Language Used
 
 <img src="images/PySpark_logo.jpeg" alt="PySpark Logo" width="100"/>
