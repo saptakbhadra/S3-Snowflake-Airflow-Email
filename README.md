@@ -23,14 +23,18 @@ This project is hosted entirely in the cloud on an EC2 instance running Apache A
      - 4.2. Move the data from the staging table to the target table.
      - 4.3. Send an email notification after successful data ingestion.
 
+## DAGs in Apache Airflow
+<img src="images/Airflow.png" alt="Flowchart" width="500"/>
+
 ## Output
 
-Link to Output Picture: [Output Picture](link_to_output_picture)
+<img src="images/Snowflake Target Data.png" alt="Flowchart" width="500"/>
 
 ## Hosted Machine
 
 <img src="images/EC2_logo.png" alt="EC2 Logo" width="100"/>
 #### EC2
+
 ## Language Used
 
 <img src="images/PySpark_logo.jpeg" alt="PySpark Logo" width="100"/>
